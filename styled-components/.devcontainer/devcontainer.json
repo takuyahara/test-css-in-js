@@ -1,0 +1,13 @@
+// See https://containers.dev/implementors/json_reference/ for configuration reference
+{
+  "name": "styled-components",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": ["EditorConfig.EditorConfig", "esbenp.prettier-vscode"]
+    }
+  },
+  "remoteUser": "node"
+}
