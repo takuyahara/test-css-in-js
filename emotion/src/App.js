@@ -1,3 +1,4 @@
+import React from "react";
 import { css } from "@emotion/css";
 
 const style = css`
@@ -31,14 +32,14 @@ const genStyle = (color) => css`
   }
 `;
 
-export const App = () => {
+export default function App() {
   return (
     <>
-      <div class={style}>class="{style}"</div>
-      <div class={style}>class="{style}"</div>
-      <div class={style2}>class="{style2}"</div>
-      <div class={genStyle("hotpink")}>class="{genStyle("hotpink")}"</div>
-      <div class={genStyle("hotpink")}>class="{genStyle("hotpink")}"</div>
+      <div className={style}>class="{style}"</div>
+      <div className={style}>class="{style}"</div>
+      <div className={style2}>class="{style2}"</div>
+      <div className={genStyle("hotpink")}>class="{genStyle("hotpink")}"</div>
+      <div className={genStyle("hotpink")}>class="{genStyle("hotpink")}"</div>
     </>
   );
-};
+}
