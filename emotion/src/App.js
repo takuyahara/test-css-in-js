@@ -1,7 +1,7 @@
 import React from "react";
-import { css } from "@emotion/css";
+import styled from "@emotion/styled";
 
-const style = css`
+const StyledDiv = styled.div`
   margin: 32px;
   padding: 32px;
   background-color: hotpink;
@@ -11,7 +11,7 @@ const style = css`
     color: white;
   }
 `;
-const style2 = css`
+const StyledDiv2 = styled.div`
   margin: 32px;
   padding: 32px;
   background-color: hotpink;
@@ -21,10 +21,10 @@ const style2 = css`
     color: white;
   }
 `;
-const genStyle = (color) => css`
+const GenStyledDiv = styled.div`
   margin: 32px;
   padding: 32px;
-  background-color: ${color};
+  background-color: ${(props) => props.color};
   font-size: 24px;
   border-radius: 4px;
   &:hover {
@@ -35,11 +35,15 @@ const genStyle = (color) => css`
 export default function App() {
   return (
     <>
-      <div className={style}>class="{style}"</div>
-      <div className={style}>class="{style}"</div>
-      <div className={style2}>class="{style2}"</div>
-      <div className={genStyle("hotpink")}>class="{genStyle("hotpink")}"</div>
-      <div className={genStyle("hotpink")}>class="{genStyle("hotpink")}"</div>
+      <StyledDiv>&lt;StyledDiv&gt;</StyledDiv>
+      <StyledDiv>&lt;StyledDiv&gt;</StyledDiv>
+      <StyledDiv2>&lt;StyledDiv2&gt;</StyledDiv2>
+      <GenStyledDiv color="hotpink">
+        &lt;GenStyledDiv color=&quot;hotpink&quot;&gt;
+      </GenStyledDiv>
+      <GenStyledDiv color="hotpink">
+        &lt;GenStyledDiv color=&quot;hotpink&quot;&gt;
+      </GenStyledDiv>
     </>
   );
 }
