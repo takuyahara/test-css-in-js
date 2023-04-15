@@ -1,6 +1,6 @@
 // See https://containers.dev/implementors/json_reference/ for configuration reference
 {
-  "name": "Emotion",
+  "name": "Twind",
   "build": {
     "dockerfile": "Dockerfile"
   },
